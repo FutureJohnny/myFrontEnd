@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 
+//import our services
+import {AuthLoginService} from './service/auth-login.service';
+import {AuthRegisterService} from './service/auth-register.service';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,8 @@ import { LoginComponent } from './auth/login/login.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AuthRegisterService,
+  AuthLoginService], //our service providers
   bootstrap: [AppComponent]
 })
 export class AppModule { }
