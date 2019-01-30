@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
 
     register() {
       this.loading = true;
-      this.registerSeervice.create(this.model)
+      this.registerService.create(this.model)
           .subscribe(
               data => {
                 const returnedMessage = ValidationMessage > data;

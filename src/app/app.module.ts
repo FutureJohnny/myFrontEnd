@@ -18,6 +18,8 @@ import { AlertComponent } from './directives/alert/alert.component';
 import {ErrorInterceptorProvider} from './servives/helper/error.interceptor';
 import {JwtInterceptorProvider} from './services/helper/jwt.interceptor';
 import { MenuComponent } from './menu/menu.component';
+import {MatMenuModule, MatCommonModule, MatButtonModule, MatCardModule, MatToolbarModule, MatIconModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -27,14 +29,23 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
       HomeComponent,
       AlertComponent,
-      MenuComponent
+      MenuComponent,
+      CreateReviewComponent,
   ],
 
   imports: [
     BrowserModule,
       FormsModule,
       AppRouting,
-      HttpClientModule
+      HttpClientModule,
+      MatMenuModule,
+      MatCommonModule,
+      MatButtonModule,
+      MatCardModule,
+      MatToolbarModule,
+      MatIconModule,
+      BrowserAnimationsModule,
+
   ],
 
   providers: [AuthRegisterService,
