@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthRegisterService, AlertService} from '../../services/auth-register.service';
+import {Router} from '@anglar/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  model: any = {};
+  loading = false;
 
-  ngOnInit() {
+  constructor(private registerService: AuthRegisterService, private router: Router, private alertService: AlertService) {
+    ngOnInit() {
+
+    }
+
+    register() {
+      this.loading = true;
+      this.registerSeervice.create(this.model)
+          .subscribe(
+              data => {console.log(data);
+              this.alertService.success('Registration Successful', true);
+              this.router.navigate(['/login']);
+
+              },
+              error => {
+                this.alertService.error(error);
+                this.loading = false;
+              });
+    }
   }
+
+
 
 }
