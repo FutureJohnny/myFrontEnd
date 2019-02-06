@@ -1,5 +1,5 @@
 module.exports = {
   'secret': 'nodeauthsecret',
-  'database': 'mongodb://localhost/filmreviews'
+  'apiUrl': 'http://localhost:3000'
 };
 

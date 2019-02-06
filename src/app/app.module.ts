@@ -20,6 +20,14 @@ import {JwtInterceptorProvider} from './services/helper/jwt.interceptor';
 import { MenuComponent } from './menu/menu.component';
 import {MatMenuModule, MatCommonModule, MatButtonModule, MatCardModule, MatToolbarModule, MatIconModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { EditReviewComponent } from './edit-review/edit-review.component';
+import { MyReviewsComponent } from './my-reviews/my-reviews.component';
+import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
+import { CreateAdminComponent } from './create-admin/create-admin.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
 
 
 @NgModule({
@@ -31,6 +39,14 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
       AlertComponent,
       MenuComponent,
       CreateReviewComponent,
+      EditReviewComponent,
+      MyReviewsComponent,
+      EditUserProfileComponent,
+      CreateAdminComponent,
+      UserManagementComponent,
+      AboutUsComponent,
+      ContactUsComponent,
+      WhereWeAreComponent,
   ],
 
   imports: [
