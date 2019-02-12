@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthRegisterService, AlertService} from '../../services/auth-register.service';
-import {Router} from '@anglar/router';
+import {Router} from '@angular/router';
 
-import {ValidationMessage} from "../../models/validationMessage";
+import {ValidationMessage} from '../../models/validationMessage';
 
 @Component({
   selector: 'app-register',
