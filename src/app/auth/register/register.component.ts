@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthRegisterService, AlertService} from '../../services/auth-register.service';
+import {AuthRegisterService} from '../../services/auth-register.service';
+import {AlertService} from '../../services/alert.service';
 import {Router} from '@angular/router';
 
 import {ValidationMessage} from '../../models/validationMessage';
@@ -25,7 +26,7 @@ export class RegisterComponent implements OnInit {
       this.registerService.create(this.model)
           .subscribe(
               data => {
-                const returnedMessage = ValidationMessage > data;
+                const returnedMessage = data as ValidationMessage ;
 
                 if (returnedMessage.success) {
 
