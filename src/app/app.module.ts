@@ -36,7 +36,10 @@ import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
 import { CreateReviewComponent} from './create-review/create-review.component';
 
 import {NgxEditorModule} from 'ngx-editor';
-import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-font-awesome';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
+
+import {ReviewService} from './services/review.service';
+import { ViewReviewsComponent } from './view-reviews/view-reviews.component';
 
 
 @NgModule({
@@ -56,6 +59,7 @@ import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-fon
       AboutUsComponent,
       ContactUsComponent,
       WhereWeAreComponent,
+      ViewReviewsComponent,
   ],
 
   imports: [
@@ -89,7 +93,7 @@ import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-fon
   ],
 
   providers: [AuthRegisterService,
-  AuthLoginService, AuthGuard, AlertService, JwtInterceptorProvider, ErrorInterceptorProvider],
+  AuthLoginService, AuthGuard, AlertService, JwtInterceptorProvider, ErrorInterceptorProvider, ReviewService],
 
   bootstrap: [AppComponent]
 })

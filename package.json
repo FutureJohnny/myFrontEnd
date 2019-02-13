@@ -28,6 +28,7 @@
     "@schematics/angular": "^0.1.16",
     "ajv": "^6.9.1",
     "angular-font-awesome": "^3.1.2",
+    "angular-material-fileupload": "^2.0.0",
     "codemirror": "^5.34.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",

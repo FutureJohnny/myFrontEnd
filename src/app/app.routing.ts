@@ -37,7 +37,7 @@ const appRoutes: Routes = [
       component: CreateReviewComponent,
       data: { title: 'Create Review'}
     },
-    { path: 'editreview',
+    { path: 'editreview/:id',
       component: EditReviewComponent,
       data: { title: 'Edit Review'}
     },
