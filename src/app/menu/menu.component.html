@@ -11,12 +11,12 @@
       <button mat-button [mat-menu-trigger-for]="aboutMenu" >About <i class="material-icons">&#xE5C5;</i> </button>
 
 
-      <button mat-button style="alignment: right" [routerLink]="['/register']" routerLinkActive="active" >Register</button>
+      <button *ngIf="!LoggedIn" mat-button style="alignment: right" [routerLink]="['/register']" routerLinkActive="active" >Register</button>
 
 
 
 
-      <button  mat-button style="alignment: right"   [routerLink]="['/login']" routerLinkActive="active"  >Log In
+      <button  *ngIf="!LoggedIn" mat-button style="alignment: right"   [routerLink]="['/login']" routerLinkActive="active"  >Log In
       </button>
 
 

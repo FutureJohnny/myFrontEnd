@@ -19,8 +19,9 @@ import { AlertComponent } from './alert/alert.component';
 import {ErrorInterceptorProvider} from './services/helper/error.interceptor';
 import {JwtInterceptorProvider} from './services/helper/jwt.interceptor';
 import { MenuComponent } from './menu/menu.component';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {
-  MatMenuModule, MatCommonModule, MatButtonModule, MatCardModule, MatToolbarModule, MatIconModule,
+  MatMenuModule, MatCommonModule, MatButtonModule, MatCardModule, MatNativeDateModule, MatToolbarModule, MatIconModule,
   MatFormFieldModule, MatDatepickerModule, MatInputModule, MatSidenavModule, MatAutocompleteModule, MatCheckboxModule, MatGridListModule,
   MatDialogModule, MatLineModule, MatChipsModule, MatExpansionModule, MatProgressBarModule, MatRadioModule
 } from '@angular/material';
@@ -89,7 +90,8 @@ import { ViewReviewsComponent } from './view-reviews/view-reviews.component';
       BrowserAnimationsModule,
       NgxEditorModule,
       AngularFontAwesomeModule,
-
+      MatNativeDateModule,
+      MatMomentDateModule,
   ],
 
   providers: [AuthRegisterService,
