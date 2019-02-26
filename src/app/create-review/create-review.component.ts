@@ -5,6 +5,7 @@ import {ReviewService} from '../services/review.service';
 import {AuthLoginService} from '../services/auth-login.service';
 import {User} from '../models/user';
 import {Router} from '@angular/router';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -14,8 +15,8 @@ import {Router} from '@angular/router';
 })
 export class CreateReviewComponent implements OnInit {
   htmlContent: string;
-  newReview= new Review();
-  currentUser = new User();
+  newReview = new Review();
+  currentUser = new User('', '', '');
   constructor(private reviewService: ReviewService,  private router: Router) { }
 
   ngOnInit() {
@@ -29,7 +30,7 @@ export class CreateReviewComponent implements OnInit {
 
     this.reviewService.create(this.newReview)
       .subscribe(res => {
-          const id = res['_id'];
+          let id = res['_id'];
           this.router.navigate(['/']);
         }, (err) => {
           console.log(err);

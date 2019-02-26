@@ -14,7 +14,7 @@ import { AuthRegisterService} from './services/auth-register.service';
 import { AppRouting } from './app.routing';
 import {AuthGuard} from './guards/auth.guard';
 import { HomeComponent} from './home/home.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { AlertComponent } from './alert/alert.component';
 import {ErrorInterceptorProvider} from './services/helper/error.interceptor';
 import {JwtInterceptorProvider} from './services/helper/jwt.interceptor';
